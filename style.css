@@ -1,0 +1,888 @@
+/* =========================================================
+   1. UNIVERSAL SELECTOR
+   ========================================================= */
+
+/*
+   * means "select every HTML element".
+
+   box-sizing: border-box;
+   → Width/height includes padding and border.
+   → Makes sizing much easier.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   2. BODY
+   ========================================================= */
+
+/*
+   body = complete visible webpage.
+
+   margin: 0;
+   → Removes browser's default margin.
+
+   font-family
+   → Changes the text style.
+
+   background
+   → Sets the page background.
+
+   color
+   → Sets default text color.
+
+   line-height
+   → Controls vertical space between lines.
+*/
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   3. HEADER
+   ========================================================= */
+
+/*
+   header = top section of your website.
+
+   text-align: center;
+   → Puts text in the center.
+
+   padding:
+   → Creates space INSIDE the element.
+
+   background:
+   → Background color.
+
+   border-bottom:
+   → Creates a line at the bottom.
+*/
+
+header {
+    text-align: center;
+    padding: 35px 20px;
+    background: #12355b;
+    color: white;
+    border-bottom: 5px solid #f4b400;
+}
+
+
+/* Main heading inside header */
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+
+/* Subtitle */
+
+header p {
+    margin: 8px 0 20px;
+    font-size: 18px;
+}
+
+
+/*
+   Logo image
+
+   border-radius: 50%;
+   → Makes square image circular.
+
+   object-fit: cover;
+   → Keeps image inside the given dimensions.
+*/
+
+header img {
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   4. NAVIGATION BAR
+   ========================================================= */
+
+/*
+   nav = navigation section.
+*/
+
+nav {
+    background: white;
+
+    /* Flexbox puts items in a row */
+    display: flex;
+
+    /* Centers navigation links */
+    justify-content: center;
+
+    /* Allows wrapping on smaller screens */
+    flex-wrap: wrap;
+
+    padding: 15px;
+
+    /* Shadow gives depth */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+    /* Keeps nav visible while scrolling */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+/*
+   Navigation links
+
+   a = anchor/link
+*/
+
+nav a {
+    color: #12355b;
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 8px 14px;
+
+    border-radius: 6px;
+
+    /* Smooth animation */
+    transition: 0.3s;
+}
+
+
+/*
+   :hover = CSS pseudo-class
+
+   This style appears when mouse goes over link.
+*/
+
+nav a:hover {
+    background: #12355b;
+    color: white;
+}
+
+
+/*
+   Your HTML contains | between links.
+
+   Since nav uses flexbox, those "|" characters
+   may still appear as separate text nodes.
+   They are harmless, but removing them from HTML
+   would make the navigation cleaner.
+*/
+
+
+/* =========================================================
+   5. MAIN CONTAINER
+   ========================================================= */
+
+/*
+   main contains the main content.
+
+   max-width:
+   → Prevents content from becoming extremely wide.
+
+   margin: auto;
+   → Centers the main container.
+
+   padding:
+   → Creates space inside.
+*/
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+
+/* =========================================================
+   6. SECTIONS
+   ========================================================= */
+
+/*
+   Every section becomes like a CARD.
+
+   background: white;
+   → White card.
+
+   border-radius:
+   → Rounded corners.
+
+   box-shadow:
+   → Gives a card effect.
+
+   margin-bottom:
+   → Space between sections.
+*/
+
+section {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/*
+   Section headings
+*/
+
+section h2 {
+    color: #12355b;
+
+    border-left: 5px solid #f4b400;
+
+    padding-left: 12px;
+
+    margin-top: 0;
+}
+
+
+/*
+   Smaller heading
+*/
+
+section h3 {
+    color: #245b88;
+}
+
+
+/* =========================================================
+   7. HORIZONTAL RULE
+   ========================================================= */
+
+/*
+   hr = horizontal line.
+
+   Your HTML has many <hr>.
+*/
+
+hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+}
+
+
+/* =========================================================
+   8. HOME IMAGE
+   ========================================================= */
+
+/*
+   This targets the campus image.
+
+   max-width: 100%;
+   → Image won't overflow on small screens.
+
+   height: auto;
+   → Maintains original image ratio.
+*/
+
+#home img {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+
+    margin: 20px auto;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   9. LISTS
+   ========================================================= */
+
+/*
+   ul = unordered list
+   ol = ordered list
+   li = list item
+*/
+
+ul,
+ol {
+    padding-left: 25px;
+}
+
+
+li {
+    margin-bottom: 8px;
+}
+
+
+/*
+   Hover effect on list items
+*/
+
+li:hover {
+    color: #12355b;
+}
+
+
+/* =========================================================
+   10. DESCRIPTION LIST
+   ========================================================= */
+
+/*
+   dl = description list
+   dt = term
+   dd = description
+*/
+
+dt {
+    font-weight: bold;
+    color: #12355b;
+
+    margin-top: 12px;
+}
+
+
+dd {
+    margin-left: 20px;
+}
+
+
+/* =========================================================
+   11. TABLES
+   ========================================================= */
+
+/*
+   border-collapse: collapse;
+   → Combines table borders.
+
+   width: 100%;
+   → Table uses full available width.
+
+   overflow:
+   → On very small screens, tables may need scrolling.
+*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+
+/*
+   caption = table title
+*/
+
+caption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #12355b;
+}
+
+
+/*
+   th = table heading
+*/
+
+th {
+    background: #12355b;
+    color: white;
+    padding: 12px;
+}
+
+
+/*
+   td = table data cell
+*/
+
+td {
+    padding: 11px;
+    border: 1px solid #ddd;
+}
+
+
+/*
+   nth-child(even)
+   → Selects every even row.
+
+   This creates alternating row colors.
+*/
+
+tbody tr:nth-child(even) {
+    background: #f1f5f9;
+}
+
+
+/*
+   Hover effect on table rows
+*/
+
+tbody tr:hover {
+    background: #e8f0f8;
+}
+
+
+/*
+   tfoot = table footer
+*/
+
+tfoot {
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   12. FORM
+   ========================================================= */
+
+/*
+   form = complete registration form
+*/
+
+form {
+    width: 100%;
+}
+
+
+/*
+   fieldset = group of related form controls.
+
+   We make it look like a card inside the section.
+*/
+
+fieldset {
+    border: 2px solid #d9e2ec;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/*
+   legend = title of fieldset
+*/
+
+legend {
+    font-weight: bold;
+
+    color: #12355b;
+
+    padding: 0 10px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   13. FORM LABELS
+   ========================================================= */
+
+label {
+    font-weight: 600;
+}
+
+
+/*
+   Form paragraph spacing
+*/
+
+form p {
+    margin: 18px 0;
+}
+
+
+/* =========================================================
+   14. TEXT INPUTS
+   ========================================================= */
+
+/*
+   We select several input types together.
+
+   This is called GROUP SELECTOR.
+*/
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+input[type="url"],
+select,
+textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    margin-top: 7px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    background: white;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================================
+   15. FOCUS
+   ========================================================= */
+
+/*
+   :focus means:
+
+   "When the user clicks inside the input."
+
+   box-shadow creates a highlight.
+*/
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #12355b;
+
+    box-shadow: 0 0 0 3px rgba(18, 53, 91, 0.12);
+}
+
+
+/* =========================================================
+   16. TEXTAREA
+   ========================================================= */
+
+textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+/* =========================================================
+   17. RADIO BUTTONS & CHECKBOXES
+   ========================================================= */
+
+/*
+   These should NOT have width: 100%.
+
+   That's why we style them separately.
+*/
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+
+    margin-right: 6px;
+}
+
+
+/* =========================================================
+   18. FILE INPUT
+   ========================================================= */
+
+input[type="file"] {
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   19. COLOR INPUT
+   ========================================================= */
+
+input[type="color"] {
+    width: 60px;
+    height: 40px;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   20. SUBMIT & RESET BUTTONS
+   ========================================================= */
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-right: 10px;
+
+    transition: 0.3s;
+}
+
+
+/*
+   Submit button
+*/
+
+input[type="submit"] {
+    background: #12355b;
+    color: white;
+}
+
+
+/*
+   Reset button
+*/
+
+input[type="reset"] {
+    background: #e5e7eb;
+    color: #222;
+}
+
+
+/*
+   Button hover
+*/
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   21. PROGRESS BAR
+   ========================================================= */
+
+progress {
+    width: 100%;
+    height: 20px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   22. FAQ
+   ========================================================= */
+
+/*
+   details = collapsible content.
+
+   summary = clickable question.
+*/
+
+details {
+    border: 1px solid #d9e2ec;
+
+    border-radius: 8px;
+
+    margin: 10px 0;
+
+    padding: 12px 15px;
+
+    background: #f8fafc;
+}
+
+
+/*
+   summary is clickable.
+*/
+
+summary {
+    cursor: pointer;
+
+    font-weight: bold;
+
+    color: #12355b;
+}
+
+
+/*
+   When details is opened:
+*/
+
+details[open] {
+    background: white;
+}
+
+
+/* =========================================================
+   23. AUDIO & VIDEO
+   ========================================================= */
+
+audio,
+video {
+    max-width: 100%;
+
+    display: block;
+
+    margin-top: 15px;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   24. GOOGLE MAP
+   ========================================================= */
+
+iframe {
+    width: 100%;
+
+    max-width: 600px;
+
+    height: 300px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    display: block;
+
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   25. FOOTER
+   ========================================================= */
+
+footer {
+    background: #12355b;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    margin-top: 30px;
+}
+
+
+footer h3 {
+    margin-top: 0;
+}
+
+
+/*
+   Footer links
+*/
+
+footer a {
+    color: #f4b400;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/*
+   Hover effect
+*/
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   26. RESPONSIVE DESIGN
+   ========================================================= */
+
+/*
+   @media means:
+
+   "Apply these CSS rules only when
+    screen width is 700px or less."
+
+   This makes the website mobile-friendly.
+*/
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 15px 10px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    nav a {
+        padding: 7px 9px;
+        font-size: 14px;
+    }
+
+    /*
+       Tables can become too wide on phones.
+    */
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    /*
+       Campus image automatically shrinks.
+    */
+
+    #home img {
+        width: 100%;
+    }
+
+    /*
+       Video automatically fits screen.
+    */
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
